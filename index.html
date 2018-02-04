@@ -8,7 +8,21 @@
 <body>
 	
 	
+	<h1 id="change-heading">JavaScript Mastery</h1>
+	<div class="container">
+		
+		<button onClick="doClick()" >click me</button>
 
-	
+		<!-- attach an event handler to this element using JS core function called inner HTML, but I should mix HTML and JavaScript-->
+		<button onclick="this.innerHTML= 'you clicked!'" >click this</button>
+		
+		<button onclick="changeText(this)" >click this one now</button>
+
+		<!-- using dom functio  get element by id -->
+		<button onclick="changeHeading()" >change the heading</button>
+
+		<h1 id='time'>Show Time</h1>
+		<button onmouseout="clearDate()" onmouseover="showDate()" >show time</button>
+	</div>
 </body>
 </html>
