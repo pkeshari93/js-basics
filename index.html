@@ -29,8 +29,9 @@
 	<br>
 	<br>
 
-	<form method="post" action="something.php" name="myForm">
-	
+	<form id="form" style="display: block; text-align: center; border: black solid 1em; padding: 2em" method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+		
+		<h1 id="heading">Form Color</h1>
 		<div>
 			<label>First Name</label>
 			<input type="text" name="firstName" id="firstName"/>
@@ -43,7 +44,9 @@
 		<br>
 		<div>
 			<label for="background">Background</label>
-			<select name="background" id="background">
+
+
+			<select name="background" id="background" onchange="changeBackground(this)">
 				<option value="red">Red</option>
 				<option value="blue">Blue</option>
 				<option value="green">Green</option>

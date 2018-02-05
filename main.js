@@ -170,6 +170,31 @@ function clearDate(){
 
 
 // forms
+function changeBackground(x){
+	console.log("hello");
+	var form = document.getElementById('form');
+	form.style.background = x.value;
+
+	var heading = document.getElementById('heading');
+	heading.innerHTML = 'Form Color Changed to ' + x.value;
+}
+
+function validateForm(){
+	var firstName = document.forms['myForm']['firstName'].value;
+	if(firstName == null || firstName ==	''){
+		alert('First name is required');
+		// stops the form from submitting
+		return false;
+	}
+
+	if(firstName.length < 3){
+		alert('First name must at least be 3 characters');
+		// stops the form from submitting
+		return false;
+	}
+}
+
+
 
  
 
